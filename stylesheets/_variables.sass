@@ -1,0 +1,76 @@
+$main-font: 'Helvetica Neue', sans-serif 
+$grey: #8f8f8f
+$greylight: #f2f2f2
+
+.main-title
+  font-size: 25px
+  color: $grey
+  text-align: center
+
+
+@mixin clearfix 
+  &:after 
+    content: ""
+    display: table
+    clear: both
+  
+
+
+.slick-dots
+  display: inline-block !important
+  max-width: 500px
+  left: 50%
+  transform: translateX(-50%)
+  top: -70px 
+  bottom: initial
+  li
+    margin: 0 3px
+    button
+      &:before
+        border: 2px $grey solid
+        background: $grey
+        border-radius: 100px
+        width: 10px
+        height: 10px
+        opacity: 1
+        content: ''
+  .slick-active 
+    & > button
+      &:before
+        border: 2px $grey solid
+        background: transparent
+        border-radius: 100px
+        width: 10px
+        height: 10px
+        content: ''
+
+.slick-prev
+  height: 50px
+  background: url('../images/prev.png') no-repeat left center
+  opacity: 0.5
+  transition: opacity 0.3s
+  left: -30px
+  &:hover
+    background: url('../images/prev.png') no-repeat left center
+    opacity: 1
+  &:before
+    content: ''
+
+
+.slick-next
+  height: 50px
+  background: url('../images/next.png') no-repeat left center
+  opacity: 0.5
+  transition: opacity 0.3s
+  right: -30px
+  &:hover
+    background: url('../images/next.png') no-repeat left center
+    opacity: 1
+  &:before
+    content: ''
+
+.container
+  max-width: 1170px
+  margin: 50px auto
+  position: relative
+  font-family: $main-font

@@ -1,0 +1,77 @@
+.main
+  min-width: 1170px //for non-responsive version
+  .left
+    display: inline-block
+    vertical-align: top
+    .title
+      font-size: 24px
+      font-weight: 600
+      text-transform: uppercase
+  .right
+    display: inline-block
+    vertical-align: bottom
+    float: right
+    margin-top: 15px
+    margin-right: 2px
+    p, img 
+      display: inline-block
+      vertical-align:  middle
+    p
+      margin-right: 5px
+      font-size: 12px
+      color: $grey
+  .gallery, .gallery-2
+    @include clearfix
+    margin-top: 10px
+    .item
+      z-index 9999
+      margin-right: 30px
+      outline: none
+      &:first-child
+        margin-left: 15px
+      &:last-child
+        margin-right: 15px
+
+      .info
+        margin-top: 40px
+        -webkit-user-select: text
+        -moz-user-select: text 
+        -ms-user-select: text 
+        font-size: 14px 
+        @include clearfix
+        &:hover
+          & > .image
+            background: $greylight
+          & > .title
+            opacity: 1
+        .image
+          height: 270px
+          position: relative
+          width: 100%
+          transition: background 0.3s
+          img
+            height: 250px
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%,-50%)
+        .title
+          margin-top: 35px
+          font-weight: 600
+          color: #000
+          opacity: 0.7
+          line-height: 24px
+          display: block
+          transition: opacity 0.3s
+          text-decoration: none
+        .description
+          display: inline-block
+          color: $grey
+        .price 
+          display: inline-block
+          font-weight: 600
+          float: right 
+          color: #ff0000
+
+
+
